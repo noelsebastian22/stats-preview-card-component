@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main .card {
+  background: hsl(244, 38%, 16%);
+  max-width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 5px;
+}
+main .card .overlay {
+  position: absolute; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(120 10 189 / 50%); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+main .card .card-image {
+  position: relative;
+  width: 50%;
+  background-size: cover;
+}
+main .card .card-image img {
+  width: 100%;
+  height: 100%;
+}
+
+main .card .card-body {
+  width: 50%;
+  padding: 40px;
+}
+
+main .card .card-body .title {
+  color: hsl(0, 0%, 100%);
+}
+
+main .card .card-body .title span {
+  color: hsl(277, 64%, 61%);
+}
+
+main .card .card-body p {
+  color: hsla(0, 0%, 100%, 0.4);
+  font-size: 10px;
+  line-height: 1.7;
+  margin-top: 25px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main .card .stats {
+  margin-top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main .card .stats .stat-value {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+main .card .stats .stat-label {
+  color: hsla(0, 0%, 100%, 0.4);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 11px;
+  font-variant: small-caps;
+}
+
+@media (max-width: 376px) {
+  main {
+    height: 110vh;
+  }
+  main .card {
+    display: block;
+  }
+  main .card .card-image {
+    width: 100%;
+  }
+  main .card .card-body {
+    width: 100%;
+    text-align: center;
+    padding: 25px;
+  }
+  main .card .stats {
+    display: block;
+  }
+  main .card .stats .stat {
+    margin-top: 20px;
+  }
+  main .card .stats .stat-label {
+    font-size: 12px;
+  }
+  main .card .card-body p {
+    font-size: 12px;
+  }
+}
